@@ -1,0 +1,50 @@
+body{
+  margin:0px;
+  padding:0px;
+}
+
+.header {
+  background-color:#333;
+  color:#ccc;
+  border-bottom:2px solid #fff;
+  padding:10px 6px;
+  font-size:1em;
+}
+
+.preview {
+  padding: 2px;
+  border:1px solid #333;
+  background-color:#ccc;
+  margin:4px;
+}
+
+.buttons{
+  margin:4px;
+  text-align:center;
+}
+
+.buttons button{
+  float:left;
+  background: #1dde77;
+  background-image: -webkit-linear-gradient(top, #1dde77, #2bb847);
+  background-image: -moz-linear-gradient(top, #1dde77, #2bb847);
+  background-image: -ms-linear-gradient(top, #1dde77, #2bb847);
+  background-image: -o-linear-gradient(top, #1dde77, #2bb847);
+  background-image: linear-gradient(to bottom, #1dde77, #2bb847);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1em;
+  padding: 8px 0px 8px 0px;
+  text-decoration: none;
+  border:none;
+  cursor:pointer;
+  width:190px;
+  margin-right:10px;
+}
+
+.no-margin-right{
+  margin-right:0px !important;
+}
