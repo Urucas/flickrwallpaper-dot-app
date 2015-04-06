@@ -1,0 +1,35 @@
+{
+  "name": "flickrWall",
+  "version": "1.0.0",
+  "description": "Bored of the same wallpaper everyday? Get a trending photo from flickr everyday. Built entirely in nodejs.",
+  "main": "atom-shell .",
+  "scripts": {
+    "pretest": "make clean",
+    "test": "node_modules/mocha/bin/mocha tests/index.js --compilers js:babel/register -t 15s --require mocha-clean",
+    "prestart": "make clean && make",
+    "start": "node bin/flickrwall",
+    "prebuild": "atom-shell-packager . FlickrWallpaper --ignore=node_modules/atom-shell",
+    "build": "atom-shell ./app.js"
+  },
+  "author": "Urucas <hello@urucas.com>",
+  "license": "MIT",
+  "dependencies": {
+    "atom-shell": "^0.22.3",
+    "babel": "^5.0.8",
+    "flickrapi": "^0.3.28",
+    "menubar": "^2.0.4",
+    "mocha-clean": "^0.4.0",
+    "path": "^0.11.14",
+    "socket.io": "^1.3.5",
+    "wallpaper": "^1.0.0"
+  },
+  "devDependencies": {
+    "atom-shell-packager": "^2.1.1",
+    "mocha": "^2.2.1",
+    "trash": "^1.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/urucas/flickrwall-dot-app.git"
+  }
+}
