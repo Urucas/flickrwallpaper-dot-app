@@ -19,6 +19,7 @@
     "flickrapi": "^0.3.28",
     "menubar": "^2.0.4",
     "path": "^0.11.14",
+    "request": "^2.55.0",
     "socket.io": "^1.3.5",
     "wallpaper": "^1.0.0"
   },
