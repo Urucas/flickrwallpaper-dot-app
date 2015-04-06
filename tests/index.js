@@ -21,20 +21,20 @@ describe('FlickrWall instance test', () => {
     done();
   });
 
-  it("Test yesterday date", (done) => {
+  it("Test before yesterday method", (done) => {
     
     let today = new Date();
-    let yesterday = flickrwall.yesterday();
-    if( (today.getDate() - yesterday.getDate()) <= 0) {
-      throw new Error("Error getting yesterday date");
+    let beforeYesterday = flickrwall.beforeYesterday();
+    if( (today.getDate() - beforeYesterday.getDate()) != 2) {
+      throw new Error("Error getting before yesterday date");
     }
     done();
   });
   
   it("Test formatted date", (done) => {
     
-    let yesterday = flickrwall.yesterday();
-    let formattedDate = flickrwall.formattedDate(yesterday);
+    let beforeYesterday = flickrwall.beforeYesterday();
+    let formattedDate = flickrwall.formattedDate(beforeYesterday);
     
     let testDate = new Date(formattedDate);
     if(testDate == "Invalid Date") {
