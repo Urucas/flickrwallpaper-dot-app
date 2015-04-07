@@ -5,15 +5,10 @@ var mb = menubar({
   width : 400,
   height: 340,
   index : 'file://' + path.join(__dirname, 'app', 'app.html'),
-  icon  : 'file://' + path.join(__dirname, 'Icon.png')
+  icon  : 'file://' + path.join(__dirname, 'Icon.png'),
+  frame : false,
+  resizable: false
 })
 
-mb.on('ready', function ready () {
-  console.log('ready');
-})
+mb.on('ready', function ready () { console.log("app ready"); });
 
-/*
-var config = require('../node/config');
-var flickrwall = require('../node');
-var app = new flickrwall(config);
-*/
