@@ -4,19 +4,19 @@
   "description": "Bored of the same wallpaper everyday? Get a trending photo from flickr everyday. Built entirely in nodejs.",
   "main": "atom-shell .",
   "scripts": {
-    "pretest": "make clean",
     "test": "node_modules/mocha/bin/mocha tests/index.js --compilers js:babel/register -t 15s --require mocha-clean",
-    "prestart": "make clean && make",
-    "start": "node bin/flickrwall",
-    "prebuild": "atom-shell-packager . FlickrWallpaper --ignore=node_modules/atom-shell",
+    "prebuild": "trash --force FlickrWallpaper.app && atom-shell-packager . FlickrWallpaper --ignore=node_modules/atom-shell",
     "build": "atom-shell ./app.js"
   },
   "author": "Urucas <hello@urucas.com>",
   "license": "MIT",
   "dependencies": {
+    "angular": "^1.3.15",
     "atom-shell": "^0.22.3",
     "babel": "^5.0.8",
+    "express": "^4.12.3",
     "flickrapi": "^0.3.28",
+    "http": "0.0.0",
     "menubar": "^2.0.4",
     "path": "^0.11.14",
     "request": "^2.55.0",
@@ -26,7 +26,8 @@
   "devDependencies": {
     "atom-shell-packager": "^2.1.1",
     "mocha": "^2.2.1",
-    "mocha-clean": "^0.4.0"
+    "mocha-clean": "^0.4.0",
+    "trash": "^1.4.1"
   },
   "repository": {
     "type": "git",
