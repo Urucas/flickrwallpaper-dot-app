@@ -23,11 +23,13 @@ setBtt.addEventListener("click", function(){
     return;
   }
   try {
-    flickrwall.setWallpaper(wallpaper, function(path){
-      console.log(path);
-    }, function(err) {
-      console.log(err.getMessage());
-    });
-  }catch(e){}
+    flickrwall.downloadImage(wallpaper, function(path){
+    flickrwall.setWallpaper(path, function() {
+      console.log("done");
+    }, function(err) { console.log(err.getMessage());});
+    }, function(err) { console.log(err.getMessage());});
+  }catch(e){
+    console.log(e.getMessage());  
+  }
 });
 
