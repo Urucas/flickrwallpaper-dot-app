@@ -1,20 +1,56 @@
 body{
   margin:0px;
   padding:0px;
+  background-color:#222;
 }
 
 .header {
-  background-color:#333;
-  color:#ccc;
+  background-color:#fff;
+  color:#222;
   border-bottom:2px solid #fff;
   padding:10px 6px;
+  font-size:1.2em;
+}
+
+.header ul, .header li {
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+
+.header p{
+  float:left;
+  margin:0px;
+  padding:0px;
   font-size:1em;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.header ul{
+  float:right;
+}
+
+.header li{
+  float:right;
+  margin:0px 2px;
+}
+
+.header li button{
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-size:1em;
+}
+
+.clearfix{
+  clear:both;
 }
 
 .preview {
   padding: 2px;
-  border:1px solid #333;
-  background-color:#ccc;
+  border:1px solid #ccc;
+  background-color:#fff;
   margin:4px;
 }
 
@@ -47,4 +83,20 @@ body{
 
 .no-margin-right{
   margin-right:0px !important;
+}
+
+#randomBtt{
+  width:19px;
+  height:19px;
+  background-image:url('../img/dice.png');
+  background-size:19px 19px;
+  background-repeat:no-repeat;
+  background-position:0px 0px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-right: 3px;
+}
+
+.fa-github{
+  color:#666;
 }
